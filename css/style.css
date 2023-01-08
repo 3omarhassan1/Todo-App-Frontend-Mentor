@@ -23,7 +23,7 @@
   --pad: 60px;
   font-size: 18px;
   color: #fff;
-  --pcolor: var(--Dark-Grayish-Blue);
+  --pcolor: var(--Light-Grayish-Blue);
   --bgcolor: var(--Very-Dark-Blue);
   --taskbg: var(--Very-Dark-Desaturated-Blue);
   --bgurl: url("../images/bg-desktop-dark.jpg");
@@ -33,7 +33,8 @@
 }
 
 .light {
-  --logo: var(--Dark-Grayish-Blue);
+  --pcolor: var(--Light-Grayish-Blue2);
+  --logo: hsl(234, 11%, 80%);
   --bcolor: var(--Light-Grayish-Blue);
   --text: var(--Very-Dark-Grayish-Blue2);
   --taskbg: var(--Light-Grayish-Blue2);
@@ -70,6 +71,9 @@ body {
   color: var(--textcolor);
   background-color: var(--bgcolor);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section {
@@ -130,7 +134,7 @@ img {
 
 .logo-bg {
   position: absolute;
-  top: 320px;
+  top: 335px;
   left: 50%;
   transform: translate(-50%, 0%);
   display: flex;
@@ -189,13 +193,13 @@ main>a {
   height: 100%;
   top: 0;
   right: -4px;
-  background-color: var(--Light-Grayish-Blue);
+  background-color: var(--pcolor);
 }
 
 main>a p {
   font-size: 20px;
   margin: 0 0 0 6px;
-  color: var(--Light-Grayish-Blue);
+  color: var(--pcolor);
   line-height: 25px;
 }
 
@@ -207,6 +211,7 @@ main>a p {
 
 .svg-text span {
   letter-spacing: 0px;
+  transition: none;
 }
 
 .fill-main {
@@ -214,7 +219,7 @@ main>a p {
 }
 
 .fill-white {
-  fill: var(--Light-Grayish-Blue);
+  fill: var(--pcolor);
 }
 
 .fill-tcol {
@@ -226,18 +231,32 @@ main>a p {
 }
 
 h1 {
-  margin-bottom: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.theme::before {
+  color: var(--pcolor);
+  transition: 0.3s;
+}
+
+.themep {
+  color: var(--pcolor);
+  margin: 0;
+  font-size: 1rem;
+  padding-left: 4px;
+  padding-top: 3px;
 }
 
 .desk,
 .mob,
 .tips {
   text-transform: capitalize;
-  color: var(--Light-Grayish-Blue);
+  color: var(--pcolor);
 }
 
 .tips {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .f {
@@ -248,7 +267,7 @@ h1 {
   display: none;
 }
 
-.theme {
+.themediv {
   cursor: pointer;
 }
 
@@ -371,6 +390,7 @@ button {
 
 .left {
   margin: 0;
+  color: var(--Dark-Grayish-Blue);
 }
 
 .shuffle {
