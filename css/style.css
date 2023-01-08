@@ -230,9 +230,18 @@ h1 {
 }
 
 .desk,
-.mob {
+.mob,
+.tips {
   text-transform: capitalize;
   color: var(--Light-Grayish-Blue);
+}
+
+.tips {
+  font-size: 1rem;
+}
+
+.f {
+  margin-bottom: 6px;
 }
 
 .mob {
